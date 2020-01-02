@@ -1,6 +1,8 @@
-package com.deloitte.employee;
+package com.deloitte.library.bookservices;
+
+import com.deloitte.library.model.Library;
 
 public interface BookInterface {
-		public Library addBooks(String bookname,String bookauthor, String price);
+		public void addBooks(String bookname,String bookauthor, String price);
 		public Library[] displayAllBooks();
 }

@@ -1,4 +1,4 @@
-package com.deloitte.employee;
+package com.deloitte.library.model;
 
 public class Library {
 		private static int bookid;
@@ -6,6 +6,9 @@ public class Library {
 		private String bookauthor;
 		private int price;
 		private static int counter;
+		public Library() {
+			counter++;
+		}
 		public static int getCounter() {
 			return counter;
 		}
@@ -15,11 +18,11 @@ public class Library {
 		static {
 			counter=1001;
 		}
-		public static int getBookid() {
+		public int getBookid() {
 			return bookid;
 		}
-		public static void setBookid(int bookid) {
-			Library.bookid = counter++;
+		public void setBookid(int bookid) {
+			this.bookid =bookid;
 		}
 		public String getBookname() {
 			return bookname;
@@ -41,7 +44,7 @@ public class Library {
 		}
 		@Override
 		public String toString() {
-			return "Library [bookid id="+ counter++ +"bookname=" + bookname + ", bookauthor=" + bookauthor + ", price=" + price + "]";
+			return "Library [bookid id="+bookid +"bookname=" + bookname + ", bookauthor=" + bookauthor + ", price=" + price + "]";
 		}
 		
 }

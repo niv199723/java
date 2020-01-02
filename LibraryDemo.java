@@ -1,6 +1,9 @@
-package com.deloitte.employee;
+package com.deloitte.library.main;
 
 import java.util.Scanner;
+
+import com.deloitte.library.bookservices.BookMethodImplementation;
+import com.deloitte.library.model.Library;
 
 import java.util.ArrayList;
 public class LibraryDemo {
@@ -23,8 +26,8 @@ public class LibraryDemo {
 			String bookauthor = scr.next();
 			System.out.println("Enter price of the book");
 			String price = scr.next();
-		    Library lb=bookMethodimpl.addBooks(bookname, bookauthor, price);
-			list.add(lb);
+		    bookMethodimpl.addBooks(bookname, bookauthor, price);
+		
 			break;
 			
 		case "2":
